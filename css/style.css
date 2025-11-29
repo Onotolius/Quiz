@@ -23,7 +23,7 @@ body {
   padding: 20px;
   background-color: var(--bg-secondary);
   display: grid;
-  grid-template-rows: 150px auto 150px;
+  grid-template-rows: 200px auto 200px;
   align-items: center;
   width: 50%;
   height: 50%;
