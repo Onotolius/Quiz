@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <main>
+      <section class="quiz">
+        <div class="container">
+          <div class="quiz__inner">
+            <div class="quiz__header">
+              <h3 class="quiz__question" id="questionContainer">
+                How Long it can be ?
+              </h3>
+              <div class="quiz__data">
+                <p class="question-qty">
+                  Questions: <span class="qeustion__current">0</span>/<span
+                    class="question__total"
+                    >0</span
+                  >
+                </p>
+                <p>Score: <span class="quiz__score">0</span></p>
+              </div>
+            </div>
+            <div class="answers">
+              <ul class="answers__list" id="answersContainer"></ul>
+              <p class="answers__description"></p>
+            </div>
+            <div class="quiz__actions">
+              <button class="quiz__btn btn-next">Next</button>
+              <button class="quiz__btn btn-reset">Reset</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="index.js" defer></script>
+  </body>
+</html>

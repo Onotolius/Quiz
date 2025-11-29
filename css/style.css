@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  font-family: "Rubik", sans-serif;
+  --bg-color: black;
+  --text: orange;
+  --bg-secondary: #161616;
+  --border-radius: 10px;
+  --correct: green;
+  --wrong: red;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text);
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.quiz__inner {
+  border-radius: var(--border-radius);
+  padding: 20px;
+  background-color: var(--bg-secondary);
+  display: grid;
+  grid-template-rows: 100px auto 100px;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+}
+.quiz__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.answers__list {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.answers__list-item {
+  align-items: center;
+  border: 1px solid var(--text);
+  border-radius: var(--border-radius);
+  padding: 5px 10px;
+}
+.answers__list-item:hover {
+  background-color: #4d4d4d;
+  cursor: pointer;
+}
+.answers__description {
+  color: var(--correct);
+}
+.correct {
+  border: 1px solid var(--correct);
+  color: var(--correct);
+}
+.wrong {
+  border: 1px solid var(--wrong);
+  color: var(--wrong);
+}
+.quiz__actions {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.quiz__btn {
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: var(--text);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+}
+.quiz__btn:hover {
+  background-color: darkorange;
+  cursor: pointer;
+}
