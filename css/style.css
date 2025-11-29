@@ -23,7 +23,7 @@ body {
   padding: 20px;
   background-color: var(--bg-secondary);
   display: grid;
-  grid-template-rows: 100px auto 100px;
+  grid-template-rows: 150px auto 150px;
   align-items: center;
   width: 50%;
   height: 50%;
@@ -77,4 +77,19 @@ body {
 .quiz__btn:hover {
   background-color: darkorange;
   cursor: pointer;
+}
+@media (max-width: 500px) {
+  .quiz__inner {
+    height: 80%;
+    width: 80%;
+  }
+  .quiz__question {
+    font-size: 1em;
+  }
+  .quiz__header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+  }
 }

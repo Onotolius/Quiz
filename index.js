@@ -6,11 +6,12 @@ const scoreContainer = document.querySelector(".quiz__score");
 const nextBtn = document.querySelector(".btn-next");
 const resetBtn = document.querySelector(".btn-reset");
 const answerDescription = document.querySelector(".answers__description");
+const questionNumber = document.querySelector(".qeustion__current");
 let score = 0;
 let currentQuestionIndex = 0;
 let isAnswered = false;
 questionsTotal.textContent = questions.length;
-
+// render Logic
 function renderQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
   answersContainer.innerHTML = "";
@@ -23,10 +24,28 @@ function renderQuestion() {
     element.innerHTML = answer.text;
     answersContainer.appendChild(element);
   });
+  answerDescription.textContent = "";
+  questionNumber.textContent = currentQuestionIndex + 1;
 }
-renderQuestion();
+// listeneres
+nextBtn.addEventListener("click", function () {
+  if (!isAnswered) return;
+  if (currentQuestionIndex === questions.length - 1) {
+    question.textContent = "Finish";
+    answersContainer.innerHTML = `<li>Finish🎇</li>`;
+    answerDescription.textContent = `Your score: ${score} / ${questions.length}`;
+    return;
+  }
+  currentQuestionIndex += 1;
+  renderQuestion();
+});
+resetBtn.addEventListener("click", function () {
+  score = 0;
+  scoreContainer.textContent = `${score}`;
+  currentQuestionIndex = 0;
+  renderQuestion();
+});
 answersContainer.addEventListener("click", function (event) {
-  console.log("CLICK");
   if (isAnswered) return;
   const target = event.target;
   if (!target.classList.contains("answers__list-item")) return;
@@ -50,4 +69,8 @@ answersContainer.addEventListener("click", function (event) {
     }
   });
   answerDescription.textContent = questions[currentQuestionIndex].explanation;
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  renderQuestion();
 });
