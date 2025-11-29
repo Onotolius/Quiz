@@ -3,6 +3,8 @@
 A small vanilla JavaScript quiz app that tests basic JS and frontend knowledge.  
 Built without frameworks – just HTML, CSS and modern ES modules.
 
+## Live Preview
+https://onotolius.github.io/Quiz/
 ## Features
 
 - 🎯 Multiple choice questions (JS / frontend basics)
