@@ -16,7 +16,7 @@ Built without frameworks – just HTML, CSS and modern ES modules.
 - 📱 Simple responsive layout (optimized for small screens, `max-width: 500px`)
 
 ## ScreenShots
-![Desktop](./screenshots/Descktop.png);
+![Desktop](./screenshots/Desktop.png);
 ![Mobile](./screenshots/Mobile.png);
 
 ## Tech Stack
