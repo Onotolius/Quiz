@@ -23,10 +23,10 @@ body {
   padding: 20px;
   background-color: var(--bg-secondary);
   display: grid;
-  grid-template-rows: 200px auto 200px;
+  grid-template-rows: auto 1fr auto;
+  gap: 30px;
   align-items: center;
   width: 50%;
-  height: 50%;
 }
 .quiz__header {
   display: flex;
@@ -80,8 +80,9 @@ body {
 }
 @media (max-width: 500px) {
   .quiz__inner {
-    height: 80%;
-    width: 80%;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 10px;
   }
   .quiz__question {
     font-size: 1em;
